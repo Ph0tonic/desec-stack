@@ -41,7 +41,7 @@
               If you like our service, please consider donating.
             </p>
             <p class="text-center">
-              <v-btn outlined :to="{name: 'donate'}">Donate</v-btn>
+              <v-btn variant="outlined" :to="{name: 'donate'}">Donate</v-btn>
             </p>
           </v-card-text>
         </v-card>

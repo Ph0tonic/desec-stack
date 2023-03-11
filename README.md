@@ -93,10 +93,10 @@ API Versions and Roadmap
 
 deSEC currently maintains the following API versions:
 
-API Version | URL Prefix | Status    | Support Ends
------------ | ---------- | --------- | ------------
-Version 1   | `/api/v1/` |  stable   | earliest 6 months after v2 is declared stable
-Version 2   | `/api/v2/` |  unstable
+| API Version | URL Prefix | Status   | Support Ends                                  |
+| ----------- | ---------- | -------- | --------------------------------------------- |
+| Version 1   | `/api/v1/` | stable   | earliest 6 months after v2 is declared stable |
+| Version 2   | `/api/v2/` | unstable |
 
 You can find our documentation for all API versions at https://desec.readthedocs.io/. (Select the version of interest in the navigation bar.)
 

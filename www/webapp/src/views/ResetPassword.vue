@@ -43,12 +43,12 @@
                                     v-model="email"
                                     label="Email"
                                     :prepend-icon="mdiEmail"
-                                    outlined
+                                    variant="outlined"
                                     required
                                     :rules="email_rules"
                                     :error-messages="email_errors"
                                     @change="email_errors=[]"
-                                    validate-on-blur
+                                    validate-on="blur"
                                     ref="emailField"
                                     tabindex="1"
                             />
@@ -60,7 +60,7 @@
                         </v-card-text>
                         <v-card-actions class="justify-center">
                             <v-btn
-                                    depressed
+                                    variant="flat"
                                     color="primary"
                                     type="submit"
                                     :loading="working"

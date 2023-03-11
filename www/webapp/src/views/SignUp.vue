@@ -33,12 +33,12 @@
                       v-model="email"
                       label="Email"
                       :prepend-icon="mdiEmail"
-                      outlined
+                      variant="outlined"
                       required
                       :rules="email_rules"
                       :error-messages="email_errors"
                       @change="email_errors=[]"
-                      validate-on-blur
+                      validate-on="blur"
                       ref="emailField"
                       tabindex="1"
               />
@@ -95,7 +95,7 @@
                       v-model="domain"
                       :label="domainType === 'dynDNS' ? 'DynDNS domain' : 'Domain name'"
                       prepend-icon="mdi-blank"
-                      outlined
+                      variant="outlined"
                       required
                       :disabled="domainType === 'none' || domainType === undefined || (domainType === 'dynDNS' && !limitationsAccepted)"
                       :rules="domainType === 'dynDNS' ? dyn_domain_rules : (domainType === 'custom' ? domain_rules : [])"
@@ -154,7 +154,7 @@
             </v-card-text>
             <v-card-actions class="justify-center">
               <v-btn
-                      depressed
+                      variant="flat"
                       class="px-4"
                       color="primary"
                       type="submit"

@@ -23,7 +23,7 @@
           </v-checkbox>
         </v-layout>
         <v-btn
-                depressed
+                variant="flat"
                 class="mt-4"
                 color="primary"
                 type="submit"

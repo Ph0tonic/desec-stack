@@ -11,7 +11,7 @@
 
     <div v-if="!user.authenticated">
       <div class="my-2 text-h6">
-        <v-icon class="primary--text">{{ mdiNumeric0Circle }}</v-icon>
+        <v-icon class="text-primary">{{ mdiNumeric0Circle }}</v-icon>
         Configure your DNS records
       </div>
       <p>Before delegating your domain, you might want to take the following steps:</p>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="my-2 text-h6">
-      <v-icon class="primary--text">{{ mdiNumeric1Circle }}</v-icon>
+      <v-icon class="text-primary">{{ mdiNumeric1Circle }}</v-icon>
       Delegate your domain
     </div>
     <p>
@@ -74,7 +74,7 @@
     <p>Once your provider processes this information, the Internet will start directing DNS queries to deSEC.</p>
 
     <div class="my-2 text-h6">
-      <v-icon class="primary--text">{{ mdiNumeric2Circle }}</v-icon>
+      <v-icon class="text-primary">{{ mdiNumeric2Circle }}</v-icon>
       Enable DNSSEC
     </div>
     <div v-if="user.authenticated">
@@ -86,7 +86,7 @@
       </p>
       <p class="small">
         Notes: When using block format, some providers require you to add the domain name in the beginning. (Also,
-        <a class="grey--text text--darken-1" href="https://github.com/oskar456/cds-updates" target="_blank">depending on
+        <a class="text-grey-darken-1" href="https://github.com/oskar456/cds-updates" target="_blank">depending on
         your domain's suffix</a>, we will perform this step automatically.)
       </p>
 
@@ -131,7 +131,7 @@
       </v-card>
 
       <div class="my-2 text-h6">
-        <v-icon class="primary--text">{{ mdiNumeric3Circle }}</v-icon>
+        <v-icon class="text-primary">{{ mdiNumeric3Circle }}</v-icon>
         Check Setup
       </div>
       <p>
@@ -154,7 +154,7 @@
       <template #action="{ attrs }">
         <v-btn
             color="pink"
-            text
+            variant="text"
             v-bind="attrs"
             @click="snackbar = false"
         >
