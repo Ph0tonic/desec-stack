@@ -1,28 +1,30 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from '@/App.vue'
-import router from '@/router'
-import vuetify from '@/plugins/vuetify'
-import VueRouter from 'vue-router'
-import Vuelidate from 'vuelidate'
+
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
 import "@fontsource/roboto/300.css" /* light */
 import "@fontsource/roboto/400.css" /* regular */
 import "@fontsource/roboto/400-italic.css" /* regular-italic */
 import "@fontsource/roboto/500.css" /* medium */
 import "@fontsource/roboto/700.css" /* bold */
-import {createPinia, PiniaVuePlugin} from "pinia";
+import { createPinia } from "pinia"
 
+import router from '@/router'
 
-Vue.config.productionTip = false
-Vue.use(Vuelidate)
-// `Pinia` replaces `vuex` as store.
-Vue.use(PiniaVuePlugin)
+const vuetify = createVuetify({
+  components,
+  directives,
+})
+
 const pinia = createPinia()
-// Must be after `pinia` initialisation to be accessible.
-Vue.use(VueRouter)
 
-new Vue({
-  router,
-  pinia,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+createApp(App)
+  .use(vuetify)
+  .use(pinia)
+  .use(router)
+  .mount('#app')

@@ -1,7 +1,7 @@
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/views/HomePage.vue'
-import {HTTP} from '@/utils';
-import {useUserStore} from "@/store/user";
+import { HTTP } from '@/utils';
+import { useUserStore } from "@/store/user";
 
 const routes = [
   {
@@ -35,12 +35,12 @@ const routes = [
     component: () => import('@/views/WelcomePage.vue'),
   },
   {
-    path: 'https://desec.readthedocs.io/',
+    path: '/desec.readthedocs.io/', // TODO
     name: 'docs',
     beforeEnter(to) { location.href = to.path },
   },
   {
-    path: 'https://talk.desec.io/',
+    path: '/talk.desec.io/', // TODO
     name: 'talk',
     beforeEnter(to) { location.href = to.path },
   },
@@ -58,31 +58,31 @@ const routes = [
     path: '/totp/',
     name: 'totp',
     component: () => import('@/views/CrudListTOTP.vue'),
-    meta: {guest: false},
+    meta: { guest: false },
   },
   {
     path: '/totp-verify/',
     name: 'TOTPVerify',
     component: () => import('@/views/Console/TOTPVerifyDialog.vue'),
-    props: (route) => ({...route.params}),
+    props: (route) => ({ ...route.params }),
   },
   {
     path: '/mfa/',
     name: 'mfa',
     component: () => import('@/views/MFA.vue'),
-    meta: {guest: false},
+    meta: { guest: false },
   },
   {
     path: '/change-email/:email?',
     name: 'change-email',
     component: () => import('@/views/ChangeEmail.vue'),
-    meta: {guest: false},
+    meta: { guest: false },
   },
   {
     path: '/delete-account/',
     name: 'delete-account',
     component: () => import('@/views/DeleteAccount.vue'),
-    meta: {guest: false},
+    meta: { guest: false },
   },
   {
     path: '/donate/',
@@ -123,26 +123,27 @@ const routes = [
     path: '/tokens',
     name: 'tokens',
     component: () => import('@/views/CrudListToken.vue'),
-    meta: {guest: false},
+    meta: { guest: false },
   },
   {
     path: '/domains',
     name: 'domains',
     component: () => import('@/views/CrudListDomain.vue'),
-    meta: {guest: false},
+    meta: { guest: false },
   },
   {
     path: '/domains/:domain',
     name: 'domain',
     component: () => import('@/views/CrudListRecord.vue'),
-    meta: {guest: false},
+    meta: { guest: false },
   },
 ]
 
-const router = new VueRouter({
+const router = createRouter({
   mode: 'history',
+  history: createWebHistory(),
   base: import.meta.env.BASE_URL,
-  scrollBehavior (to, from) {
+  scrollBehavior(to, from) {
     // Skip if destination full path has query parameters and differs in no other way from previous
     if (from && Object.keys(to.query).length) {
       if (to.fullPath.split('?')[0] == from.fullPath.split('?')[0]) return;
@@ -179,7 +180,7 @@ router.beforeEach((to, from, next) => {
       // Log in state was present, but not needed for the current page
       if (recovered && to.name === 'home') {
         // User restored a previous session. If navigation to home, divert to home page for authorized users
-        next({name: 'domains'})
+        next({ name: 'domains' })
       }
     }
     next() // make sure to always call next()!
