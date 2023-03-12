@@ -35,8 +35,7 @@
               <v-row>
                 <v-col class="py-0">
                   <v-text-field
-                    outlined
-                    flat
+                    variant="outlined"
                     v-model="email"
                     :prepend-inner-icon="mdiEmail"
                     type="email"
