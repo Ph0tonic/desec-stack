@@ -1,21 +1,22 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
-import colors from 'vuetify/lib/util/colors'
+import { createVuetify } from 'vuetify'
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
+import colors from 'vuetify/util/colors'
+import 'vuetify/styles'
 
-
-Vue.use(Vuetify);
-
-
-export default new Vuetify({
+export default createVuetify({
   icons: {
-    iconfont: 'mdiSvg', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+    defaultSet: 'mdi',
+    aliases,
+    sets: { mdi },
   },
   theme: {
     themes: {
       light: {
-        primary: colors.amber,
-        secondary: colors.lightBlue.darken1,
-        accent: colors.amber.accent4,
+        colors: {
+          primary: colors.amber.base,
+          secondary: colors.lightBlue.darken1,
+          accent: colors.amber.accent4,
+        },
       },
     },
   },

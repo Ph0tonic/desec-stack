@@ -16,8 +16,8 @@
         <v-card class="elevation-12">
           <v-toolbar
                   color="primary"
-                  dark
-                  flat
+                  theme="dark"
+                  variant="flat"
           >
             <v-toolbar-title>Welcome to deSEC</v-toolbar-title>
           </v-toolbar>

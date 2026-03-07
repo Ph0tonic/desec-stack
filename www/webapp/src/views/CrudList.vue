@@ -35,7 +35,7 @@
           >
             <template #top>
               <!-- Headline & Toolbar, Including New Form -->
-              <v-toolbar flat>
+              <v-toolbar variant="flat">
                 <v-toolbar-title>{{ headlines.table }}</v-toolbar-title>
                 <v-spacer />
                 <v-text-field
@@ -57,7 +57,7 @@
                 <v-btn
                         id="create"
                         color="primary"
-                        dark
+                        theme="dark"
                         size="small"
                         fab
                         variant="flat"
@@ -135,7 +135,7 @@
                         />
 
                           <v-expansion-panels
-                              flat
+                              variant="flat"
                               v-if="Object.keys(writeableAdvancedColumns).length > 0"
                           >
                             <v-expansion-panel>

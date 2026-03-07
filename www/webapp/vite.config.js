@@ -1,10 +1,8 @@
 /* eslint-env node */
 import {defineConfig} from 'vite'
 import {resolve} from 'node:path';
-import Components from 'unplugin-vue-components/vite'
-import {VuetifyResolver} from 'unplugin-vue-components/resolvers'
 import legacy from '@vitejs/plugin-legacy'
-import vue from '@vitejs/plugin-vue2'
+import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
     define: {
@@ -26,9 +24,6 @@ export default defineConfig({
                     'v-img': ['src'],
                 },
             },
-        }),
-        Components({
-            resolvers: [VuetifyResolver()],
         }),
         legacy(), // Build for old browser.
     ],

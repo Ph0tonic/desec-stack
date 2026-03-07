@@ -5,8 +5,8 @@
         <v-card>
           <v-toolbar
               color="primary"
-              dark
-              flat
+              theme="dark"
+              variant="flat"
           >
             <v-toolbar-title>Setup Instructions for <b>{{ domain }}</b></v-toolbar-title>
           </v-toolbar>

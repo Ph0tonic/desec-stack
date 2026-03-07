@@ -21,7 +21,7 @@
                 As a charity, all operations abide by our statutes which define guidelines of all operations.
                 For details regarding our statutes, please refer to the legally binding version (German) below.
               </p>
-            </div>
+            </h3>
           </v-col>
         </v-row>
       </v-container>

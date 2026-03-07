@@ -21,8 +21,8 @@
           <v-card class="elevation-12 pb-4">
             <v-toolbar
                     color="primary"
-                    dark
-                    flat
+                    datheme="dark"rk
+                    variant="flat"
             >
               <v-toolbar-title>Create new Account</v-toolbar-title>
             </v-toolbar>
@@ -60,7 +60,7 @@
                   <v-alert
                       class="mb-2 ml-8 mt-0"
                       type="info"
-                      outlined
+                      variant="outlined"
                   >
                     <p class="text-h6">Limitations of Domains Registered under {{ LOCAL_PUBLIC_SUFFIXES[0] }}</p>
                     <p>

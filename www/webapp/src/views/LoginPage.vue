@@ -20,8 +20,8 @@
           <v-card class="elevation-12 pb-4">
             <v-toolbar
                     color="primary"
-                    dark
-                    flat
+                    theme="dark"
+                    variant="flat"
             >
               <v-toolbar-title>Log In</v-toolbar-title>
             </v-toolbar>

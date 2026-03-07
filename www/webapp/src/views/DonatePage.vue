@@ -16,8 +16,8 @@
         <v-card>
           <v-toolbar
                   color="primary"
-                  dark
-                  flat
+                  theme="dark"
+                  variant="flat"
           >
             <v-toolbar-title>Donate</v-toolbar-title>
           </v-toolbar>
@@ -178,8 +178,8 @@
         <v-card>
           <v-toolbar
                   color="primary"
-                  dark
-                  flat
+                  theme="dark"
+                  variant="flat"
           >
             <v-toolbar-title>Support our Quest</v-toolbar-title>
           </v-toolbar>

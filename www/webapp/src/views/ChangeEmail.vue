@@ -20,8 +20,8 @@
                     <v-card class="elevation-12 pb-4">
                         <v-toolbar
                                 color="primary"
-                                dark
-                                flat
+                                theme="dark"
+                                variant="flat"
                         >
                             <v-toolbar-title>Change Account Email Address</v-toolbar-title>
                         </v-toolbar>
@@ -48,7 +48,7 @@
                                     v-model="password"
                                     :append-icon="show ? mdiEyeOff : mdiEye"
                                     prepend-icon="mdi-blank"
-                                    outlined
+                                    variant="outlined"
                                     label="Password"
                                     required
                                     :rules="[rules.required]"
